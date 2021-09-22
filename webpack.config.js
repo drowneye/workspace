@@ -11,7 +11,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.pug'
     }),
     new MiniCssExtractPlugin({
       filename: 'style.css'
@@ -42,6 +42,14 @@ module.exports = {
         test: /\.styl$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "stylus-loader"], 
       },
+      {
+        test: /\.pug$/,
+        use: [
+          {
+            loader: 'simple-pug-loader'
+          }
+        ]
+      }
     ]
   }
 };
