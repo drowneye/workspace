@@ -19,7 +19,11 @@ module.exports = {
   plugins: [
     ...PAGES.map(page => new HtmlWebpackPlugin({
       template: `${PATHS.pages}/${page}`,
-      filename: `./${page.replace(/\.pug/, '.html')}`
+      filename: `./${page.replace(/\.pug/, '.html')}`,
+      minify: {
+        collapseWhitespace: false,
+        removeComments: true,
+      }
     })),
     new MiniCssExtractPlugin({
       filename: 'style.css'
@@ -50,10 +54,6 @@ module.exports = {
             presets: ['@babel/preset-env']
           }
         }
-      },
-      {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
         test: /\.styl$/,
