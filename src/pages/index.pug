@@ -1,17 +1,12 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title ziga zaga
-    link(rel="stylesheet", href="style.css")
-  body 
-    nav 
-      ul.main-nav 
-        li 
-          a(href='#') First
-        li 
-          a(href='#') Second
-        li 
-          a(href='#') last
+extends ../blocks/layout/layout
+
+block head
+  -
+    var pageTitle = 'Тайтл'
+    var pageDescription = 'Описание'
+    var pageKeywords = 'Ключевые словечки'
+block content
+  .container
+    .content
+      h1 Заголовок
+      p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur maiores totam facilis voluptatum non ea dicta architecto harum natus. Fuga, tempore enim! Deleniti cupiditate nemo blanditiis atque delectus, praesentium vero?

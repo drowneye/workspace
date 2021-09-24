@@ -1,3 +1,9 @@
+import('inlcudes/placeholder')
+@import 'includes/variables'
+@import 'includes/mixins'
+@import 'includes/fonts'
+@import 'includes/reset'
+
 body 
   background: #fff;
 
@@ -17,3 +23,6 @@ body
     &:hover
       background-color #a5a5a5
       border-bottom 1px solid black
+
+// Last row. Include all .styl from BLOCKS directory
+import('../blocks/**/*')
