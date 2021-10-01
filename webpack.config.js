@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 const PATHS = {
-  src: path.resolve(__dirname, 'src/'),
+  src: path.resolve(__dirname, 'src'),
   dist: path.resolve(__dirname, 'dist/'),
   pages: path.resolve(__dirname, 'src/pages'),
   scripts: path.resolve(__dirname, 'src/scripts'),
@@ -14,8 +14,9 @@ const PATHS = {
 const PAGES = fs.readdirSync(`${PATHS.pages}/`).filter(fileName => fileName.endsWith('.pug'));
 
 module.exports = {
+  context: PATHS.src,
   mode: "development",
-  entry:  `${PATHS.scripts}/index.js`, //'./src/scripts/index.js',
+  entry:  './scripts/index.js', //'./src/scripts/index.js',
   devtool: 'inline-source-map',
   devServer: {
     static: './dist',
