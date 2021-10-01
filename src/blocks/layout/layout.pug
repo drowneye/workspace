@@ -1,0 +1,13 @@
+//include ../scripts/scripts
+
+doctype html
+html(lang='ru')
+  include ../head/head
+  body
+    .page
+      include ../header/header
+      main
+        block content
+      include ../footer/footer
+  //+scripts(['script.js'])
+  script(src="script.js") 

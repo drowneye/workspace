@@ -1,0 +1,65 @@
+// breakpoints
+
+point-s = 480px
+point-m = 800px
+point-l = 1000px
+point-xl = 1200px
+point-hd = 1600px
+
+containerWidth = 76rem
+
+// font sizes
+
+font-xxs = 0.625rem
+font-xs = 0.75rem
+font-s = 0.875rem
+font-m = 1rem
+font-l = 1.125rem
+font-xl = 1.25rem
+font-xxl = 1.375rem
+font-xxxl = 1.5rem
+// line-heights
+
+line-xxs = 0.9375rem
+line-xs = 1.125rem
+line-s = 1.3125rem
+line-m = 1.625rem
+line-l = 1.6875rem
+line-xl = 1.875rem
+line-xxl = 2.0625rem
+line-xxxl = 2.25rem
+
+// base-padding
+basePadding = 0.75rem
+
+// default border radius
+borderRadius = 0.625rem
+
+// functions
+padding-x(n)
+  padding-left n
+  padding-right n
+padding-y(n)
+  padding-top n
+  padding-bottom n
+margin-x(n)
+  margin-left n
+  margin-right n
+margin-y(n)
+  margin-top n
+  margin-bottom n
+
+parLike = 'p','.list-marked','.list-numbered','.table','.table-wrap'
+parMargin()
+  for item in parLike
+    {item} + &
+      margin-top 1rem
+  h1 + &
+    margin-top 1rem
+  h2 + &
+    margin-top 0.5625rem
+  h3 + &
+    margin-top 0.3125rem
+  h4 + &
+    margin-top 0.125rem
+  
